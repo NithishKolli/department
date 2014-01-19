@@ -74,9 +74,9 @@
                       </div>
                         <div class="col-md-10">
                         <ul class="bxslider">
-                             <li><img src="resources/Resized-QLAIR.jpg" title="Funky roots" /></li>
-                             <li><img src="resources/Resized-CSI9G.jpg" title="The long and winding road" /></li>
-                             <li><img src="resources/Resized-9MJ9H.jpg" title="Happy trees" /></li>
+                             <li><img src="resources/Resized-QLAIR.jpg" title="2013 Passsouts" /></li>
+                             <li><img src="resources/Resized-CSI9G.jpg" title="Training and Placement Stats" /></li>
+                             <li><img src="resources/Resized-9MJ9H.jpg" title="Department Building" /></li>
                         </ul>
                         </div>
                        <div class="col-md-1"></div>
