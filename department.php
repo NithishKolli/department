@@ -21,7 +21,7 @@
 
     </head>
     <body>
-        <?php include_once('navbar.php');
+        <?php include_once('/navbar.php');
         ?>
         <script type="text/javascript">
 
@@ -95,7 +95,13 @@ $('body').on('hidden.bs.modal', '.modal', function () {
     $(this).removeData('bs.modal');
 });
 </script>
-
+    $('li').click(function() {
+    if ( ! $(this).hasClass('active')) {
+    $('li.active').removeClass('active');
+    $(this).addClass('active');
+    // Do more stuff here
+    }
+    });
 <script>
 </script>
 
