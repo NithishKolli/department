@@ -73,6 +73,9 @@
             </ul>
         </div><!-- /.navbar-collapse -->
         </nav>
+  <!--
+    For Submenu in Admissions
+  -->
 <script>
     $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
         // Avoid following the href location when clicking
@@ -96,10 +99,7 @@
 
     });
 </script>
-<body>
 
-
-</body>
 
 
 
