@@ -23,7 +23,29 @@
                     <li><a href="tech_gc.php">Curricula</a></li>
                     <li><a href="soccult_gc.php">Subjects Offered</a></li>
                 </ul>
-                <li class="dropdown"><a href="fests.php">Admission</a></li>
+
+                <li class="menu-item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">M.Sc.</a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-item "><a href="#">2 Yr M.Sc.</a></li>
+                            <li class="menu-item "><a href="#">5 Yr M.Sc.</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="http://gate.iitk.ac.in/">Mtech.</a> </li>
+                    <li><a href="http://www.iitkgp.ac.in/topfiles/phd.php">Phd.</a> </li>
+                    <!--li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">M.Sc.</a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-item "><a href="#">Page with comments</a></li>
+                            <li class="menu-item "><a href="#">Page with comments disabled</a></li>
+
+                        </ul>
+                    </li-->
+                </ul>
+                </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -39,7 +61,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="10.109.60.60/GymkhanaRevamped">Department of Mathematics</a></li>
+                <li><a href="10.109.60.60/MathsDepartment">Department of Mathematics</a></li>
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Links <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -51,15 +73,29 @@
             </ul>
         </div><!-- /.navbar-collapse -->
         </nav>
-  <script>
-      $('li').click(function() {
-          if ( ! $(this).hasClass('active')) {
-              $('li.active').removeClass('active');
-              $(this).addClass('active');
-              // Do more stuff here
-          }
-      });
-  </script>
+<script>
+    $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+        // Avoid following the href location when clicking
+        event.preventDefault();
+        // Avoid having the menu to close when clicking
+        event.stopPropagation();
+        // If a menu is already open we close it
+        //$('ul.dropdown-menu [data-toggle=dropdown]').parent().removeClass('open');
+        // opening the one you clicked on
+        $(this).parent().addClass('open');
+
+        var menu = $(this).parent().find("ul");
+        var menupos = menu.offset();
+
+        if ((menupos.left + menu.width()) + 30 > $(window).width()) {
+            var newpos = - menu.width();
+        } else {
+            var newpos = $(this).parent().width();
+        }
+        menu.css({ left:newpos });
+
+    });
+</script>
 
 
 
