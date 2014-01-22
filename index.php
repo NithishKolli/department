@@ -24,7 +24,11 @@
         <script src="js/jquery.js"></script>
         <script src="js/jquery.scrollbox.js"></script>
         <script src="js/bootstrap.js"></script>
-		<script src="js/func.js"></script>
+<script src="js/func.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
 
 <style>
 ::-webkit-scrollbar {
@@ -53,6 +57,7 @@
     height: 1.5em;
 }
 
+    .navbar-brand { max-height: 40px; overflow: visible;padding-top: 0;padding-bottom: 0; margin-left:10px;}
 </style>
     </head>
     <body id="page">
@@ -60,55 +65,29 @@
         <div id="wrap">
               <div class="container">
                   <div class="row" style="margin-top:60px;">
-                      <div class="col-md-2">
+                      <div class="col-md-1">
                           <!--div id="twitter" style="float:left;margin-left:-105px;background-color:#8c1515;color:#fff;">
 
                               <a class="twitter-timeline" href="https://twitter.com/IITKgp" width="250" height="600" data-chrome="noscrollbar transparent"  data-theme="dark"  border-color="#ed4e6e" data-color="#ffffff" data-widget-id="406532749231550464">Tweets by @IITKgp</a>
                               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                           </div-->
                       </div>
-                      <div id="hpcarousel" class="carousel slide col-md-8" data-ride="carousel">
-                          <ol class="carousel-indicators">
-                              <li data-target="#hpcarousel" data-slide-to="0" class="active"></li>
-                              <li data-target="#hpcarousel" data-slide-to="1"></li>
-                              <li data-target="#hpcarousel" data-slide-to="2"></li>
-                          </ol>
-                          <div class="carousel-inner">
-                              <div class="active item" style="opacity: 0.7;">
-                                  <img src="resources/deparmententrance300kb.png" alt="">
-
-                              </div>
-                              <div class="item" style="opacity: 0.7;">
-                                  <img src="resources/2013passouts300kb.png">
-                                  <div class="carousel-caption">
-                                      <h4>2013 Pass outs</h4>
-                                  </div>
-                              </div>
-                              <div class="item">
-                                  <img src="resources/tnpstats300kb.png">
-                                  <div class="carousel-caption" id="tnpcaption">
-                                      <p><a href="pages/tnp.php">Training and Placement 2012</a> </p>
-                                  </div>
-                              </div>
-
-                          </div>
-
-                          <a class="left carousel-control" href="#hpcarousel" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left"></span>
-                          </a>
-                          <a class="right carousel-control" href="#hpcarousel" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right"></span>
-                          </a>
-                      </div>
-                      <div class="col-md-2"></div>
+                        <div class="col-md-10">
+                        <ul class="bxslider">
+                             <li><img src="resources/Resized-QLAIR.jpg" title="2013 Passsouts" /></li>
+                             <li><img src="resources/Resized-CSI9G.jpg" title="Training and Placement Stats" /></li>
+                             <li><img src="resources/Resized-9MJ9H.jpg" title="Department Building" /></li>
+                        </ul>
+                        </div>
+                       <div class="col-md-1"></div>
                   </div>
 
-                  <div class ="row" style="margin-top:20px;">
-                      <div class="col-md-2"><h1></div>
-                      <div class="col-md-5"><h1 style="border-bottom:1px solid #000000">Introduction</h1>
+                  <div class ="row" >
+                      <div class="col-md-1"><h1></div>
+                      <div class="col-md-6"><h1 style="border-bottom:1px solid #000000">Introduction</h1>
                       <p>Since its inception in 1951, the department has been taking a leading role in developing curricula and syllabi for engineering mathematics and statistics, initiating research in new areas of Non-Linear Mechanics, Hypo-Elasticity, Thermo-Elasticity, Numerical Analysis and Game theory, Stochastic Processes, Relativistic Cosmology, Magneto-Fluid Dynamics. In the nineties, the department diversified in the field of Fuzzy Mathematics, Multi-criteria Decision Making, Image Processing and Forecasting, Artificial Intelligence, Genetic Algorithm, Computational Fluid Dynamics and Relativistic Astro-Physics and many others. Some of the recent research projects include fuzzy logic applications, development of mechanical components through Mathematical Modelling, Dynamical Behaviour of Cardiovascular System, Dynamics of Dusty Gases, Heat and Mass Transformer, Transonic Flow Computation Past Airfoils and Thin Wings etc.</p>
                       </div>
-                      <div class="col-md-3"><h1 style="border-bottom:1px solid #000000">Events</h1>
+                      <div class="col-md-4"><h1 style="border-bottom:1px solid #000000">Events</h1>
                           <div id="events" class="span6">
                               <div id="demo" class="scroll-text">
                                   <ul>
@@ -128,7 +107,7 @@
                               </div>
                           </div>
                       </div>
-                      <div class="col-md-2"></div>
+                      <div class="col-md-1"></div>
                   </div>
             </div>
 			  </div>
@@ -151,6 +130,13 @@
         $('#demo').scrollbox();
     });
 </script>
-
+<script >
+$('.bxslider').bxSlider({
+  mode: 'fade',
+      captions: true,
+  auto: true,
+  autoControls: true
+});
+</script>
 
 </html>
